@@ -8,13 +8,14 @@ conda config --add channels omnia # otherwise can’t install parmed
 conda config --add channels defaults # Don’t want omnia to be the highest priority channel...
 conda config --add channels conda-forge
 conda install -c rbetz dabble
+conda install networkx==1.11 f90nml ambertools
 ```
 
 But follow this up with
 
 `pip install -e .`
 
-in the git directory
+in the git directory.
 
 ## Dabble ##
 [![GPLv2](https://img.shields.io/github/license/drorlab/dabble.svg)](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
