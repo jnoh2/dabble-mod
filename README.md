@@ -1,3 +1,19 @@
+## Dabble-Mod ##
+Dabble modified to allow addition of both Na+ and K+ at once.
+
+Installation intially is still the same:
+
+`conda config --add channels omnia # otherwise can’t install parmed
+conda config --add channels defaults # Don’t want omnia to be the highest priority channel...
+conda config --add channels conda-forge
+conda install -c rbetz dabble`
+
+But follow this up with
+
+`pip install -e .`
+
+in the git directory
+
 ## Dabble ##
 [![GPLv2](https://img.shields.io/github/license/drorlab/dabble.svg)](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 [![DOI](https://zenodo.org/badge/29268375.svg)](https://zenodo.org/badge/latestdoi/29268375)
