@@ -342,9 +342,22 @@ class DabbleBuilder(object):
               (pos_ions_needed + neg_ions_needed,
                pos_ions_needed, cation, neg_ions_needed))
 
+        # MOD #
+        if self.opts.get('splitnak'):
+            split_count=int(pos_ions_needed/2.0)
+            print(pos_ions_needed, split_count)
+            for _ in range(pos_ions_needed):
+                if _ < split_count:
+                    add_salt_ion('Na', molid)
+                else:
+                    add_salt_ion('K', molid)
+        else:
+            for _ in range(pos_ions_needed):
+                add_salt_ion(cation, molid)
+
         # Add the ions
-        for _ in range(pos_ions_needed):
-            add_salt_ion(cation, molid)
+        #for _ in range(pos_ions_needed):
+        #    add_salt_ion(cation, molid)
         for _ in range(neg_ions_needed):
             add_salt_ion('Cl', molid)
 

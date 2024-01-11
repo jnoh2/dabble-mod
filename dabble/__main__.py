@@ -248,6 +248,9 @@ def main(argv=None):
                             'degrees. Use the number from OPM if you have it. '
                             '[default: 0]')
 
+    group.add_argument('--split-na-k', dest='splitnak', action="store_true",
+                       help="To add both Na+ and K+ split evenly") # MOD
+
     group = parser.add_argument_group('Debug and Testing Options')
     group.add_argument('--tmp-dir', dest='tmp_dir', default=None)
     group.add_argument('--verbose', dest='debug_verbose', default=False,
