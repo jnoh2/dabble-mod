@@ -3,13 +3,12 @@ Dabble modified to allow addition of both Na+ and K+ at once.
 
 Installation intially is still the same:
 
-`conda config --add channels omnia # otherwise can’t install parmed
-
+```
+conda config --add channels omnia # otherwise can’t install parmed
 conda config --add channels defaults # Don’t want omnia to be the highest priority channel...
-
 conda config --add channels conda-forge
-
-conda install -c rbetz dabble`
+conda install -c rbetz dabble
+```
 
 But follow this up with
 
