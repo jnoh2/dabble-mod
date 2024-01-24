@@ -8,13 +8,14 @@ conda config --add channels omnia # otherwise can’t install parmed
 conda config --add channels defaults # Don’t want omnia to be the highest priority channel...
 conda config --add channels conda-forge
 conda install -c rbetz dabble
+conda install networkx==1.11 f90nml ambertools
 ```
 
 But follow this up with
 
 `pip install -e .`
 
-in the git directory
+in the git directory.
 
 An important bug to consider: for het atoms/ligands, even if the molecules have different chain letters, having the same residue number will lead to all but one being deleted during the dabble run. If there are lipids in the system, ensure they have different chain letters AND residue numbers.
 
