@@ -16,6 +16,8 @@ But follow this up with
 
 in the git directory
 
+An important bug to consider: for het atoms/ligands, even if the molecules have different chain letters, having the same residue number will lead to all but one being deleted during the dabble run. If there are lipids in the system, ensure they have different chain letters AND residue numbers.
+
 ## Dabble ##
 [![GPLv2](https://img.shields.io/github/license/drorlab/dabble.svg)](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 [![DOI](https://zenodo.org/badge/29268375.svg)](https://zenodo.org/badge/latestdoi/29268375)
